@@ -11,3 +11,4 @@ The knight Rider team is assembeld to participate and solve Future Engineers cha
 | -------------------------- | ---------------------------- |
 | ![Left](/media/IMG_20241015_152330.jpg)   | ![Right](/media/IMG_20241015_152320.jpg)   |
 | ![Top](/media/IMG_20241015_152105.jpg)     | ![Bottom](/media/bottom.jpg) |
+![IMG_20241015_152105](https://github.com/user-attachments/assets/ae4aa598-c2a1-4994-83d4-4e2549e83a6d)
