@@ -12,3 +12,13 @@ The knight Rider team is assembeld to participate and solve Future Engineers cha
 
 # schematic
 ![Untitled](https://github.com/user-attachments/assets/9d6dce5b-15a9-42b9-a64d-5593c44c3405)
+
+ motor mechanism
+ ![IMG_20241015_152543](https://github.com/user-attachments/assets/c47da51d-f129-4515-b08e-27fc2f38a409)
+![IMG_20241015_152643](https://github.com/user-attachments/assets/e8b4992e-0f2b-4474-b602-ef6f81e9b1ec)
+ ![IMG_20241015_152402](https://github.com/user-attachments/assets/96ce71a2-7b8b-4521-95d2-23084a9ce5eb)
+![IMG_20241015_152353](https://github.com/user-attachments/assets/ef4465da-e6ea-40c9-8a30-5235852a1b35)
+![IMG_20241015_152418](https://github.com/user-attachments/assets/b23f9f5e-4756-45fa-91d6-cee308bb5279)
+ ![IMG_20241015_152425](https://github.com/user-attachments/assets/bb30d1fa-ad7a-44a8-b9c1-2fdf3ca916bb)
+![IMG_20241015_152514](https://github.com/user-attachments/assets/540e1656-fa31-43d8-a906-80acb14bd0fb)
+
