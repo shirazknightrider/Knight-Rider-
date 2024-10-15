@@ -7,8 +7,7 @@ The knight Rider team is assembeld to participate and solve Future Engineers cha
 
 # Robot Photos-
 
-| ![Front](/media/IMG_20241015_152307.jpg) | ![Back](/media/IMG_20241015_152325.jpg)     |
+| ![IMG_20241015_152105](https://github.com/user-attachments/assets/de0cee88-9a7c-4816-abe4-22089d07e28d)|![IMG_20241015_152307](https://github.com/user-attachments/assets/bc66e12d-21eb-4360-8c28-6305abcc6f4e)
 | -------------------------- | ---------------------------- |
-| ![Left](/media/IMG_20241015_152330.jpg)   | ![Right](/media/IMG_20241015_152320.jpg)   |
-| ![Top](/media/IMG_20241015_152105.jpg)     | ![Bottom](/media/bottom.jpg) |
-![IMG_20241015_152105](https://github.com/user-attachments/assets/ae4aa598-c2a1-4994-83d4-4e2549e83a6d)
+|  ![IMG_20241015_152320](https://github.com/user-attachments/assets/56ae798e-4a69-4a5e-b2d1-9a1097d6050d)| ![IMG_20241015_152325](https://github.com/user-attachments/assets/a9f6fdfc-6503-4ddc-b63d-a9e7193d19af)![IMG_20241015_152330](https://github.com/user-attachments/assets/1e202b18-ba76-44d9-b113-3f5b28746b68)| ![IMG_20241015_160050](https://github.com/user-attachments/assets/a418bb4c-67a8-4a8b-8dc2-218c2ca73af6)
+ |
