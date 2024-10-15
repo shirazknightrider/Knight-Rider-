@@ -4,8 +4,11 @@ This github  repository for team Knight-Rider for WRO 2024 Izmir\Turkey. You'll 
 The knight Rider team is assembeld to participate and solve Future Engineers chalenge in Izimr on november 2024 and our roster includes Mohammadsadegh Erahimi ,Ali Zabihi ,Seyed Hossein Hashemi
 ## Contents
 1.Robot Photos-
+
 2.schematic
+
 3.motor mechanism
+
 4.links
 
 # Robot Photos-
