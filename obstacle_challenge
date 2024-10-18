@@ -1,0 +1,224 @@
+# raspberry pi code
+  import cv2
+import numpy as np
+import serial
+from picamera2 import Picamera2
+import time
+from gpiozero import Button
+
+# Constants
+MIN_BLACK_AREA = 100
+FINAL_LAP_COUNT = 3
+
+# Serial setup (assumes Arduino is connected)
+ser = serial.Serial('/dev/ttyUSB0', 9600)
+
+# Send command to Arduino
+def send_command_to_arduino(command):
+    try:
+        ser.write((str(command) + "\n").encode('utf-8'))
+    except serial.SerialException as e:
+        print(f"Error sending data: {e}")
+
+# Detect black, green, and red contours and draw bounding boxes
+def detect_contours(subimage, color):
+    
+    if color == 'black':
+        lower = np.array([0, 0, 0], np.uint8)
+        upper = np.array([180, 255, 50], np.uint8)
+    elif color == 'green':
+        lower = np.array([35, 100, 100], np.uint8)
+        upper = np.array([85, 255, 255], np.uint8)
+    elif color == 'red':
+        lower = np.array([0, 120, 70], np.uint8)
+        upper = np.array([10, 255, 255], np.uint8)
+    mask = cv2.inRange(subimage, lower, upper)
+    contours = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
+    max_area = 0
+    x, y = -1, -1
+    for contour in contours:
+        area = cv2.contourArea(contour)
+        if area > max_area:
+            max_area = area
+            x, y, w, h = cv2.boundingRect(contour)
+    
+    if max_area > MIN_BLACK_AREA:
+        cv2.rectangle(subimage, (x, y), (x + w, y + h), (255, 255, 255), 2)
+        return max_area, x, y
+    return 0, -1, -1
+
+# Navigation logic
+def navigate_robot(black_wall_area_left, black_wall_area_right, black_wall_area_top, green_pillar_area, red_pillar_area, lap_count):
+    if lap_count >= FINAL_LAP_COUNT:
+        print("Final lap completed. Stopping robot.")
+        send_command_to_arduino(1500)  # Stop the robot
+        return lap_count
+
+    # Check for pillars
+    if green_pillar_area > 0 or red_pillar_area > 0:
+        if green_pillar_area > 0 and red_pillar_area == 0:
+            print("One green pillar detected. Navigating accordingly.")
+            send_command_to_arduino(2140)  # Navigate around green pillar
+        elif red_pillar_area > 0 and green_pillar_area == 0:
+            print("One red pillar detected. Navigating accordingly.")
+            send_command_to_arduino(2150)  # Navigate around red pillar
+        elif green_pillar_area > 0 and red_pillar_area > 0:
+            print("Both green and red pillars detected. Prioritizing navigation.")
+            send_command_to_arduino(2160)  # Navigate with both pillars
+    # Check for pillars
+    
+    return lap_count
+
+# Main function
+button = Button(17)
+
+def main():
+    # Setup for Raspberry Pi Camera Module 3 Wide
+    picam2_1 = Picamera2()
+    config_1 = picam2_1.create_still_configuration({'size': (640, 480), 'format': 'RGB888', 'buffer_count': 4})
+    picam2_1.configure(config_1)
+    picam2_1.set_controls({'ExposureTime': 10000, 'AnalogueGain': 1.0})
+    picam2_1.start()
+    time.sleep(1)
+    picam2_2 = Picamera2()
+    config_2 = picam2_2.create_still_configuration({'size': (640, 480), 'format': 'RGB888', 'buffer_count': 4})
+    picam2_2.configure(config_2)
+    picam2_2.set_controls({'ExposureTime': 10000, 'AnalogueGain': 1.0})
+    picam2_2.start()
+    time.sleep(1)
+    lap_count = 0
+
+    while True:
+        # Capture frame from both cameras
+        full_frame_cam1 = picam2_1.capture_array()
+        full_frame_cam2 = picam2_2.capture_array()
+
+        # Define subimage coordinates
+        LEFT_SIDE_X_END = 150
+        TOP_Y_END = 100
+        RIGHT_SIDE_X_START = 490
+
+        # Define subimages for detecting black walls
+        black_subimage_left_cam1 = full_frame_cam1[:, :LEFT_SIDE_X_END]
+        black_subimage_top_cam1 = full_frame_cam1[:TOP_Y_END, :]
+        black_subimage_right_cam2 = full_frame_cam2[:, RIGHT_SIDE_X_START:]
+        black_subimage_top_cam2 = full_frame_cam2[:TOP_Y_END, :]
+
+        # Process subimages from both cameras
+        green_pillar_area, _, _ = detect_contours(full_frame_cam1, 'green')
+        red_pillar_area, _, _ = detect_contours(full_frame_cam1, 'red')
+        black_wall_area_left, _, _ = detect_contours(black_subimage_left_cam1, 'black')
+        black_wall_area_top_cam1, _, _ = detect_contours(black_subimage_top_cam1, 'black')
+        black_wall_area_right, _, _ = detect_contours(black_subimage_right_cam2, 'black')
+        black_wall_area_top_cam2, _, _ = detect_contours(black_subimage_top_cam2, 'black')
+
+        # Combine results from both cameras
+        black_wall_area_top = max(black_wall_area_top_cam1, black_wall_area_top_cam2)
+
+        # Navigate based on detections
+        lap_count = navigate_robot(black_wall_area_left, black_wall_area_right, black_wall_area_top, green_pillar_area, red_pillar_area, lap_count)
+
+        # Display the frames from both cameras
+        cv2.line(full_frame_cam1, (LEFT_SIDE_X_END, 0), (LEFT_SIDE_X_END, full_frame_cam1.shape[0]), (0, 0, 255), 2)
+        cv2.line(full_frame_cam1, (0, TOP_Y_END), (full_frame_cam1.shape[1], TOP_Y_END), (0, 0, 255), 2)
+        cv2.line(full_frame_cam2, (RIGHT_SIDE_X_START, 0), (RIGHT_SIDE_X_START, full_frame_cam2.shape[0]), (0, 0, 255), 2)
+        cv2.line(full_frame_cam2, (0, TOP_Y_END), (full_frame_cam2.shape[1], TOP_Y_END), (0, 0, 255), 2)
+        
+        cv2.imshow("Camera 1 Frame", full_frame_cam1)
+        cv2.imshow("Camera 2 Frame", full_frame_cam2)
+        if cv2.waitKey(1) == ord('q'):
+            send_command_to_arduino(1500)  # Stop car
+            break
+
+        
+
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    print("Waiting for button press to start the program...")
+    button.wait_for_press()
+    print("Button pressed. Starting the program...")
+    main()
+-------------------------------------------------------
+  # arduino code 
+  #include <Servo.h>
+
+// Pin definitions for L298n module
+const int motorPin1 = 5;  // IN1 on L298n
+const int motorPin2 = 4;  // IN2 on L298n
+const int enablePin = 3;  // ENA on L298n (to control speed)
+
+int pos = 72;
+Servo myservo;
+
+void setup() {
+  myservo.attach(9);
+  myservo.write(72);
+  delay(1000);
+
+  // Initialize motor control pins
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+
+  // Start with motors off
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
+  analogWrite(enablePin, 0);  // Set motor speed to 0 (off)
+
+  // Initialize serial communication
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    int command = Serial.parseInt();
+    switch (command) {
+      case 1500:  // Stop the robot
+        digitalWrite(motorPin1, LOW);
+        digitalWrite(motorPin2, LOW);
+        analogWrite(enablePin, 0);
+        Serial.println("Robot stopped.");
+        break;
+      case 2100:  // Move forward
+        digitalWrite(motorPin1, HIGH);
+        digitalWrite(motorPin2, LOW);
+        analogWrite(enablePin, 200);
+        Serial.println("Moving forward.");
+        break;
+      case 2110:  // Turn right
+        digitalWrite(motorPin1, HIGH);
+        digitalWrite(motorPin2, LOW);
+        analogWrite(enablePin, 150);
+        Serial.println("Turning right.");
+        break;
+      case 2120:  // Turn left
+        digitalWrite(motorPin1, LOW);
+        digitalWrite(motorPin2, HIGH);
+        analogWrite(enablePin, 150);
+        Serial.println("Turning left.");
+        break;
+      case 2140:  // Navigate around green pillar
+        pos = 50;
+        myservo.write(pos);
+        delay(1000);
+        Serial.println("Navigating around green pillar.");
+        break;
+      case 2150:  // Navigate around red pillar
+        pos = 105;
+        myservo.write(pos);
+        delay(1000);
+        Serial.println("Navigating around red pillar.");
+        break;
+      case 2160:  // Navigate with both pillars detected
+        pos = 72;
+        myservo.write(pos);
+        delay(1000);
+        Serial.println("Navigating with both pillars detected.");
+        break;
+      default:
+        Serial.println("Unknown command.");
+        break;
+    }
+  }
+}
