@@ -15,8 +15,8 @@ Mohammadsadegh Erahimi ,Ali Zabihi ,Seyed Hossein Hashemi
 |  ![side left](https://github.com/user-attachments/assets/42a4e8ba-32c9-41fa-9696-b8f444d2bad0)|![side right](https://github.com/user-attachments/assets/09851a68-6f88-4ba8-95c5-a989b5208d4f)|
 | ![top](https://github.com/user-attachments/assets/51420475-b3c8-42bd-9a93-b83984ac317c) |![under](https://github.com/user-attachments/assets/e8a48bcf-849f-474c-92a4-1288103ac2e2)|
 
-
-
+# schematic
+![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
 
 
 # links
