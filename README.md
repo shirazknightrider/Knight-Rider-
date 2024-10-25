@@ -16,4 +16,11 @@ This GitHub repository is for the Knight-Rider team for WRO 2024 in Izmir, Turke
 
 # Schematic
 ![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
-All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3
+All files for the 3D printed parts can be found in the (/3D-Printed-Parts.md) folder.
+
+
+
+# links
+https://www.youtube.com/watch?v=Cm_b_zUi7P4
+
+https://studio.youtube.com/video/_KMyONXeG6g/edit
