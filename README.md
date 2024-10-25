@@ -1,3 +1,5 @@
+![Custom Badge](https://img.shields.io/badge/Background-Light_Blue-f0f8ff)
+
 # Knight-Rider
 [![WRO - Future Engineers](https://img.shields.io/badge/WRO-Future_Engineers-2e52af)](https://wro-association.org/wp-content/uploads/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf)
 [![YouTube - Opening Race](https://img.shields.io/badge/YouTube-▶️%20Opening_Race-df3e3e?logo=youtube)](https://www.youtube.com/watch?v=Cm_b_zUi7P4)
