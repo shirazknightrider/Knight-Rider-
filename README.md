@@ -6,9 +6,21 @@
 [![YouTube - Obstacle Race](https://img.shields.io/badge/YouTube-▶️%20Obstacle_Race-df3e3e?logo=youtube)](https://studio.youtube.com/video/_KMyONXeG6g/edit)
 
 
-This github  repository for team Knight-Rider for WRO 2024 Izmir\Turkey. You'll find our documentation in this readme
-The knight Rider team is assembeld to participate and solve Future Engineers chalenge in Izimr on november 2024 and our roster includes 
-Mohammadsadegh Erahimi ,Ali Zabihi ,Seyed Hossein Hashemi
+This GitHub repository represents Team Knight-Rider's project for the WRO 2024 competition in Izmir, Turkey. Here, you’ll find comprehensive documentation detailing our progress and approach.
+
+Team Knight-Rider has been assembled to tackle the Future Engineers challenge, taking place in Izmir in November 2024. Our team roster includes:
+
+Mohammadsadegh Erahimi
+Ali Zabihi
+Seyed Hossein Hashemi
+
+
+
+
+
+
+
+
 
 # robot pics
 
@@ -20,8 +32,14 @@ Mohammadsadegh Erahimi ,Ali Zabihi ,Seyed Hossein Hashemi
 # schematic
 ![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
 
-# components
+# Hardware and Software components
 All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3D-Printed-Parts.md) folder and all files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md)
+
+All code for the Open Challenge and Obstacle Challenge can be accessed via the following links. The Obstacle Challenge code includes two parts: Arduino code and Raspberry Pi code. [opening-race](/open challenge code) and [obstacle-race](/obstacle_challenge)
+
+
+
+
 
 
 # links
