@@ -5,6 +5,14 @@
 [![YouTube - Opening Race](https://img.shields.io/badge/YouTube-▶️%20Opening_Race-df3e3e?logo=youtube)](https://www.youtube.com/watch?v=Cm_b_zUi7P4)
 [![YouTube - Obstacle Race](https://img.shields.io/badge/YouTube-▶️%20Obstacle_Race-df3e3e?logo=youtube)](https://studio.youtube.com/video/_KMyONXeG6g/edit)
 
+## Contents
+
+- [Photos](#robot-pics)
+- [Wiring Diagram](#schematic)
+  - [videos](#links)
+  - [3d files,codes,mechanism](#Hardware-and-Software-components)
+  
+ 
 
 This GitHub repository represents Team Knight-Rider's project for the WRO 2024 competition in Izmir, Turkey. Here, you’ll find comprehensive documentation detailing our progress and approach.
 
@@ -22,7 +30,7 @@ Seyed Hossein Hashemi
 
 
 
-# robot pics
+# robot-pics
 
 | ![front](https://github.com/user-attachments/assets/893830bf-bbf4-4076-b182-ff366b35381a)|![back](https://github.com/user-attachments/assets/7dd2da85-8d8c-4a52-82fe-d4ef05705d27)|
 | -------------------------- | ---------------------------- |
@@ -32,10 +40,10 @@ Seyed Hossein Hashemi
 # schematic
 ![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
 
-# Hardware and Software components
+# Hardware-and-Software-components
 All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3D-Printed-Parts.md) folder and all files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md)
 
-All code for the Open Challenge and Obstacle Challenge can be accessed via the following links. The Obstacle Challenge code includes two parts: Arduino code and Raspberry Pi code. [opening-race](/open challenge code) and [obstacle-race](/obstacle_challenge)
+All code for the Open Challenge and Obstacle Challenge can be accessed via the following links. The Obstacle Challenge code includes two parts: Arduino code and Raspberry Pi code. [opening-race](/open_challenge ) and [obstacle-race](/obstacle_challenge)
 
 
 
