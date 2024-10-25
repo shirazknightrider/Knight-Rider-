@@ -19,8 +19,9 @@ Mohammadsadegh Erahimi ,Ali Zabihi ,Seyed Hossein Hashemi
 
 # schematic
 ![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
-All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3D-Printed-Parts.md) folder.
 
+# components
+All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3D-Printed-Parts.md) folder and all files regarding our robots mechanism can be acssed from the [robot mechanism](/robot mechanism.md)
 
 
 # links
