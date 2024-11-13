@@ -8,7 +8,7 @@
 ## Contents
 
 - [Photos](#robot-pics)
-- [,codes,mechanism](#Hardware-and-Software-components)
+- [codes,mechanism](#Hardware-and-Software-components)
   
  
 
@@ -32,7 +32,7 @@ Seyed Hossein Hashemi
 | ![IMG_20241113_201040](https://github.com/user-attachments/assets/080e961b-9581-43a4-a03b-9e1ca9c4cd18) |   ![IMG_20241113_201124](https://github.com/user-attachments/assets/be7d053d-73b4-482a-9262-b8d308e9e892)|
 | -------------------------- | ---------------------------- |
 | ![IMG_20241113_201152](https://github.com/user-attachments/assets/0facb316-dfe9-4eac-bc6f-a149c6a88545)|  ![IMG_20241113_201213](https://github.com/user-attachments/assets/49c2a46b-364f-4644-848b-3b393dd53653)|
-|![IMG_20241113_201115](https://github.com/user-attachments/assets/3d2a73e8-c35d-48a0-98e0-7c5b6215d475)| ![Bottom](/media/bottom.jpg) |
+|![IMG_20241113_201115](https://github.com/user-attachments/assets/3d2a73e8-c35d-48a0-98e0-7c5b6215d475)| ![IMG_20241113_203054](https://github.com/user-attachments/assets/b7baea06-6374-4ec4-89ad-16933c73e3c7)|
 
 # Hardware-and-Software-components
 All files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md) and [robot-schemes](/schemes.md)
