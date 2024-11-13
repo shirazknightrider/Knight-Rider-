@@ -2,8 +2,8 @@
 
 # Knight-Rider
 [![WRO - Future Engineers](https://img.shields.io/badge/WRO-Future_Engineers-2e52af)](https://wro-association.org/wp-content/uploads/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf)
-[![YouTube - Opening Race](https://www.youtube.com/watch?v=FA67uhBnbJY)
-[![YouTube - Obstacle Race](https://www.youtube.com/watch?v=jW93ZCejsk8)
+[![YouTube - Opening Race](https://img.shields.io/badge/YouTube-▶️%20Opening_Race-df3e3e?logo=youtube)](https://www.youtube.com/watch?v=FA67uhBnbJY)
+[![YouTube - Obstacle Race](https://img.shields.io/badge/YouTube-▶️%20Obstacle_Race-df3e3e?logo=youtube)](https://www.youtube.com/watch?v=jW93ZCejsk8)
 
 ## Contents
 
