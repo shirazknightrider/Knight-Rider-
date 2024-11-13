@@ -8,9 +8,8 @@
 ## Contents
 
 - [Photos](#robot-pics)
-- [Wiring Diagram](#schematic)
-  - [videos](#links)
-  - [3d files,codes,mechanism](#Hardware-and-Software-components)
+- [videos](#links)
+- [,codes,mechanism](#Hardware-and-Software-components)
   
  
 
@@ -31,27 +30,17 @@ Seyed Hossein Hashemi
 
 
 # robot-pics
-
-| ![front](https://github.com/user-attachments/assets/893830bf-bbf4-4076-b182-ff366b35381a)|![back](https://github.com/user-attachments/assets/7dd2da85-8d8c-4a52-82fe-d4ef05705d27)|
+| ![IMG_20241113_201040](https://github.com/user-attachments/assets/080e961b-9581-43a4-a03b-9e1ca9c4cd18) |   ![IMG_20241113_201124](https://github.com/user-attachments/assets/be7d053d-73b4-482a-9262-b8d308e9e892)|
 | -------------------------- | ---------------------------- |
-|  ![side left](https://github.com/user-attachments/assets/42a4e8ba-32c9-41fa-9696-b8f444d2bad0)|![side right](https://github.com/user-attachments/assets/09851a68-6f88-4ba8-95c5-a989b5208d4f)|
-| ![top](https://github.com/user-attachments/assets/51420475-b3c8-42bd-9a93-b83984ac317c) |![under](https://github.com/user-attachments/assets/e8a48bcf-849f-474c-92a4-1288103ac2e2)|
-
-# schematic
-![SharedScreenshot](https://github.com/user-attachments/assets/20f79a69-b7d5-4a05-9a67-008a8cae2ccd)
+| ![IMG_20241113_201152](https://github.com/user-attachments/assets/0facb316-dfe9-4eac-bc6f-a149c6a88545)| ![Right](/media/right.jpg)   |
+|![IMG_20241113_201115](https://github.com/user-attachments/assets/3d2a73e8-c35d-48a0-98e0-7c5b6215d475)| ![Bottom](/media/bottom.jpg) |
 
 # Hardware-and-Software-components
-All files for the 3D printed parts can be found in the [3D-Printed-Parts](/3D-Printed-Parts.md) folder and all files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md)
+All files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md) and [robot-schemes](/schemes.md)
 
 All code for the Open Challenge and Obstacle Challenge can be accessed via the following links. The Obstacle Challenge code includes two parts: Arduino code and Raspberry Pi code. [opening-race](/open_challenge ) and [obstacle-race](/obstacle_challenge)
 
 
 
 
-
-
-# links
-https://www.youtube.com/watch?v=Cm_b_zUi7P4
-
-https://studio.youtube.com/video/_KMyONXeG6g/edit
 
