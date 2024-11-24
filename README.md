@@ -39,7 +39,7 @@ Seyed Hossein Hashemi
 # Hardware-and-Software-components
 All files regarding our robots mechanism can be acssed from the [Robo-tech](/Robot-Mechanism.md) and [robot-schemes](/schemes.md)
 
-All code for the Open Challenge and Obstacle Challenge can be accessed via the following links.  [opening-race](/open_challenge.ev3 ) and [obstacle-race](/obstacle_challenge)
+All code for the Open Challenge and Obstacle Challenge can be accessed via the following links.  [opening-race](/open-chalenge.ev3 ) and [obstacle-race](/obstacle_challenge)
 
 # links
 https://www.youtube.com/watch?v=FA67uhBnbJY
